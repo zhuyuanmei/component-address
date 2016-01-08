@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>地址联动</title>
+    <link rel="stylesheet" type="text/css" href="less/all.css">
+    <link rel="stylesheet" type="text/css" href="js/lib/address/css/address-min.css">
+    <link rel="stylesheet" type="text/css" href="js/lib/mobiscroll/css/mobiscroll.zepto.css">
+</head>
+<body id="J_Address">
+<input type="hidden" id="dispatcher" value="home">
+<section class="container">
+    <div class="address-container">
+        <ul>
+            <li>
+                <span class="item-name">省份</span>
+                <span class="item-value">
+                    <!-- 省份为空 -->
+                    <!--<select type="text" value="" id="J_Province"></select>-->
+                    <!-- 省份非空 -->
+                    <select type="text" value="" id="J_Province"><option value="330000&&浙江省">浙江省</option></select>
+                    <div class="arrow-bottom"><div class="arrow"></div></div>
+                </span>
+            </li>
+            <li>
+                <span class="item-name">城市</span>
+                <span class="item-value">
+                    <!-- 城市为空 -->
+                    <!--<select type="text" value="" id="J_City"></select>-->
+                    <!-- 城市非空 -->
+                    <select type="text" value="" id="J_City"><option value="330100&&杭州市">杭州市</option></select>
+                    <div class="arrow-bottom"><div class="arrow"></div></div>
+                </span>
+            </li>
+            <li id="J_AreaObj" class="area-obj">
+                <span class="item-name">区/县</span>
+                <span class="item-value">
+                    <!-- 区/县为空 -->
+                    <!--<select type="text" value="" id="J_Area"></select>-->
+                    <!-- 区/县非空 -->
+                    <select type="text" value="" id="J_Area"><option value="330110&&余杭区">余杭区</option></select>
+                    <div class="arrow-bottom"><div class="arrow"></div></div>
+                </span>
+            </li>
+        </ul>
+    </div>
+</section>
+<script src="js/lib/zepto/zepto.min.js" type="text/javascript"></script>
+<script src="js/lib/mobiscroll/js/mobiscroll.zepto.js" type="text/javascript"></script>
+<script src="js/seajs/sea.js?v=1.0.0" data-config="config.js?v=1.0.0" data-main="main.js?v=1.0.0" id="seajsFile"></script>
+</body>
+</html>
