@@ -3814,7 +3814,7 @@ define(function(require, exports, module) {
 
                 $.each(initArr, function(i,n){
                     n.mobiscroll().select({
-                        display: 'modal',
+                        display: 'bottom',
                         theme: 'android-holo',
                         mode: 'scroller',
                         lang: 'zh',
@@ -3862,10 +3862,16 @@ define(function(require, exports, module) {
                     }
                 }
 
+                if(htmlStr === '<option value="">请选择区/县</option>'){
+                    this.settings.areaParent.hide();
+                }else{
+                    this.settings.areaParent.show();
+                }
+
                 $elem.html(htmlStr);
 
                 $elem.mobiscroll().select({
-                    display: 'modal',
+                    display: 'bottom',
                     theme: 'android-holo',
                     mode: 'scroller',
                     lang: 'zh',
