@@ -3772,7 +3772,7 @@ define(function(require, exports, module) {
                 }else{
                     for (var i in data) {
                         if (data[i][1] == "1") {
-                            if(i === $province.val().split('&&')[0]){
+                            if($province.val() && i === $province.val().split('&&')[0]){
                                 provinceHtml = provinceHtml + '<option value="'+ i + '&&' + data[i][0] +'" selected>'+ data[i][0] +'</option>';
                             }else{
                                 provinceHtml = provinceHtml + '<option value="'+ i + '&&' + data[i][0] +'">'+ data[i][0] +'</option>';
