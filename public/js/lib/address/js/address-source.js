@@ -3852,7 +3852,7 @@ define(function(require, exports, module) {
                 }else{
                     for (var i in data) {
                         if (thisVal == data[i][1]) {
-                            if(i === $elem.val().split('&&')[0]){
+                            if($elem.val() && i === $elem.val().split('&&')[0]){
                                 htmlStr = htmlStr + '<option value="'+ i + '&&' + data[i][0] +'" selected>'+ data[i][0] +'</option>';
                             }else{
                                 htmlStr = htmlStr + '<option value="'+ i + '&&' + data[i][0] +'">'+ data[i][0] +'</option>';
@@ -3928,35 +3928,35 @@ define(function(require, exports, module) {
             }
         };
 
-        /**
-         * 默认配置
-         */
-        Address.defaults = {
-            //联动层级,为整数类型( 0:省/市；1:省/市/区(县) )
-            level: 0,
+    /**
+     * 默认配置
+     */
+    Address.defaults = {
+        //联动层级,为整数类型( 0:省/市；1:省/市/区(县) )
+        level: 0,
 
-            //省份对象
-            province: null,
+        //省份对象
+        province: null,
 
-            //城市对象
-            city: null,
+        //城市对象
+        city: null,
 
-            //区(县)对象
-            area: null,
+        //区(县)对象
+        area: null,
 
-            //区(县)对象的父节点对象
-            areaParent: null,
+        //区(县)对象的父节点对象
+        areaParent: null,
 
-            //城市Input对象字串
-            cityDummy: '#J_City_dummy',
+        //城市Input对象字串
+        cityDummy: '#J_City_dummy',
 
-            //区(县)Input对象字串
-            areaDummy: '#J_Area_dummy'
-        };
+        //区(县)Input对象字串
+        areaDummy: '#J_Area_dummy'
+    };
 
-        var rAddress = function(options) {
-            new Address(options);
-        };
+    var rAddress = function(options) {
+        new Address(options);
+    };
 
-        window.rAddress = $.rAddress = $.address = rAddress;
+    window.rAddress = $.rAddress = $.address = rAddress;
 });
